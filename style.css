@@ -1,0 +1,41 @@
+    #btnIf {
+        padding: 10px 30px;
+        background-color: yellow;
+        color: black;
+        
+    }
+    #resetBtn {
+        padding: 10px 30px;
+        background-color: red;
+        color: white;
+    }
+    #sumBtn {
+        padding: 10px 30px;
+        background-color: red;
+        color: white;
+    }
+  /* Animations */
+
+  #mydivAnimations{
+      display: inline-block;
+      background: orange;
+      padding: 30px;
+      transition: transform 0.2s;
+      transition: 2s;
+      
+  }
+.btn100, .btn400, .resetAniBtn{
+    background: blueviolet;
+    padding: 10px;
+}
+/* challenge */
+.mydivAni{
+    background: red;
+    height: 100px;
+    width: 100px;
+}
+#aniBtn{
+    background: rgb(106, 113, 128);
+    padding: 5px;
+}
+
