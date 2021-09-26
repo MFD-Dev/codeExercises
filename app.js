@@ -425,3 +425,779 @@ var strReg = "Hi, here's some text. Hi again. Also, hi.";
 // but otherwise it should take them t
 // http://www.google.com/
 // Feel free to substitute whatever urls you want though.
+
+//////////////////////////////
+// 5.6 Forms
+// checked or unchecked //////////////////////
+/* <label>
+	<input type="checkbox" id="mycheckbox">
+	Check this
+</label>
+
+<script>
+document.getElementById('mycheckbox').onclick = function(){
+	if(this.checked){
+		console.log('checked');
+	}
+	else{
+		console.log('unchecked');
+	}
+};
+</script> */
+////////////////////////////////////////
+
+// value of checkbox  ////////////////////////////////
+
+/* <div>
+	Total pizza price: $<span id="price"></span>
+</div>
+
+<form autocomplete="off">
+	<label>
+		<input type="checkbox" id="garlic" value="1">
+		Add garlic $1
+	</label>
+
+	<label>
+		<input type="checkbox" id="peppers" value="3">
+		Add peppers $3
+	</label>
+</form>
+
+<script>
+var price = 10;
+var priceSpan = document.getElementById('price');
+priceSpan.innerHTML = price;
+
+function handleCheckbox(){
+	var toppingPrice = Number(this.value);
+	if(this.checked){ price += toppingPrice; }
+	else{ price -= toppingPrice; }
+
+	priceSpan.innerHTML = price;
+}
+
+document.getElementById('garlic').onclick = handleCheckbox;
+document.getElementById('peppers').onclick = handleCheckbox;
+</script> */
+
+///////////////////////////////////////////
+
+// radio buttons ////////////////////////////////
+
+/* <label>
+	<input id="radioa" type="radio" name="q1" value="radio a">
+	Answer A
+</label>
+<label>
+	<input id="radiob" type="radio" name="q1" value="radio b">
+	Answer B
+</label>
+<script>
+document.getElementById('radioa').onclick = function(){
+	console.log(this.value);
+};
+
+document.getElementById('radiob').onclick = function(){
+	console.log(this.value);
+};
+</script> */
+
+// Remember how querySelectorAll lets you get all elements that match a CSS selector?
+//You can use the :checked pseudo-class selector from CSS to get all inputs that are checked.
+// Remember how querySelectorAll lets you get all elements that match a CSS selector?
+// You can use the :checked pseudo-class selector from CSS to get all inputs that are checked.
+// var checked = document.querySelectorAll('#myquiz input[type=radio]:checked')
+
+// select dropdowns ///////////////////////////////////
+/* <select id="myselect">
+	<option>Option 1</option>
+	<option>Option 2</option>
+	<option value="custom value">Option 3</option>
+</select>
+
+<script>
+document.getElementById('myselect').onchange = function(){
+	console.log(this.value);
+};
+</script> */
+
+
+// 1. 
+
+// Make a basic checkbox
+
+// Type the following code, then repeat it until you no longer need to look at an example.
+
+// <label>
+// 	<input type="checkbox" id="mycheckbox">
+// 	Check this
+// </label>
+
+// <script>
+// document.getElementById('mycheckbox').onclick = function(){
+// 	if(this.checked){
+// 		console.log('checked');
+// 	}
+// 	else{
+// 		console.log('unchecked');
+// 	}
+// };
+// </script>
+
+
+
+//2. 
+
+// Premium option checkbox
+
+// Create a price variable and set it to 50 by default. Show that price on a page.
+
+// Create a checkbox with the label “Add premium option”. Set the checkbox’s value to 50 in the HTML.
+
+// When the box is checked, add the checkbox value to the price, and when it’s unchecked, subtract the checkbox value from the price.
+
+// Remember to convert the checkbox value from a string to a number.
+
+
+// 3. 
+
+// Basic radio buttons
+
+// Try out the following example to see radio buttons in action:
+
+// <label>
+// 	<input id="radioa" type="radio" name="q1" value="radio a">
+// 	Answer A
+// </label>
+// <label>
+// 	<input id="radiob" type="radio" name="q1" value="radio b">
+// 	Answer B
+// </label>
+// <script>
+// document.getElementById('radioa').onclick = function(){
+// 	console.log(this.value);
+// };
+
+// document.getElementById('radiob').onclick = function(){
+// 	console.log(this.value);
+// };
+// </script>
+
+
+// 4. 
+
+// Choose a car’s color with radio buttons
+
+// Create a div that says the color of a car. (For example, it might say “Car color: red”.)
+
+// Create a set of radio buttons that can change the car’s color to red, green, or blue.
+
+// Remember to give the radio buttons the same name since you want them to be in the same group.
+
+
+
+// 5. 
+
+// A basic select dropdown
+
+// Type the example once to get a feel for it:
+
+// <select id="myselect">
+// 	<option>Option 1</option>
+// 	<option>Option 2</option>
+// 	<option value="custom value">Option 3</option>
+// </select>
+
+// <script>
+// document.getElementById('myselect').onchange = function(){
+// 	console.log(this.value);
+// };
+// </script>
+
+
+
+
+
+
+
+
+
+// 6. log
+
+// A practical select dropdown
+
+// Create a div that shows the color of a pair of shoes. (Example: “Shoe color: blue”)
+
+// Create a select dropdown that can change the selected color of the shoes.
+
+
+
+
+//////////////////////////////////
+// 6.1 Math
+
+//var power = Math.pow(5,2); // 5 to the power of 2
+// var roundDown = Math.floor(6.52);
+// var roundUp = Math.ceil(2.1);
+// var roundToNearest = Math.round(2.4);
+// var findLargest = Math.max(2,3,10,5);
+// var findSmallest = Math.min(2,3,10,5);
+
+// console.log(power); // try the other values too
+
+// var rand =  Math.floor(10*Math.random()) + 1;
+// console.log(rand);
+
+
+
+
+    // 1.  Rounding:
+
+    // Use the Math object to round 5.7 down to 5. (Feel free to look at the examples.)
+
+
+
+    // 2. Exponents:
+
+    // Raise 4 to the power of 3 using the Math object.
+
+
+
+    // 3.  Pick a random number:
+
+    // Generate a random integer from 0 through 9.
+
+    // Then try 1 through 10.
+
+    // Next, try a random integer from 3 through 8.
+
+    // After that, try typing it again (feel free to use different numbers) until you are comfortable doing it without looking at an example.
+
+
+
+
+    // 4.  Pick a random name:
+
+    // Create an array of people’s names.
+
+    // Create a button and a div.
+
+    // When the button is clicked, a random name from the array should appear in the div.
+
+    // (Hint: Remember that arrays start counting at zero.)
+
+
+
+
+
+    // 5.  Pick a random image:
+
+    // Create an array of image urls (use any images from the internet).
+
+    // Create a button and a div.
+
+    // When the button is clicked, a random image from the array should appear in the div.
+
+
+    ///////////////////////////////////////////////////////
+    // 6.2 Control Timing
+
+    // setTimeout:
+    // The setTimeout() method runs a function after a certain number of milliseconds.
+    // start with this template: setTimeout( function(){ }, 1000);
+
+    // setTimeout( functionToRun, delayInMilliseconds );
+    // Type the following code to see a real example:  
+    // setTimeout( function(){ console.log('hi'); }, 5000);
+
+
+    //setInterval()
+    // The setInterval() method runs a function over and over again with a certain delay in milliseconds each time.
+    // setInterval( function(){ console.log('hi'); }, 2000);
+
+    // clearInterval()
+    // stops a setInterval() from running.
+    // var count = 0;
+    // var sayHi = setInterval(function(){
+	//     console.log('Current number: '+ count);
+	//     count++;
+	//     if(count>9){
+	//     	clearInterval(sayHi);
+	//     }
+    // },1000);
+
+
+
+    // 1. Type the following code a few times until you can do it without looking. (To make it faster, you can omit the console log the next times you type it.)
+    // setTimeout( function(){ console.log('hi'); }, 5000);
+    // Once you’re ready, type it 5 more times without looking at an example.
+
+
+
+
+    // 2. Type the following code a few times until you can do it without looking. (To make it faster, you can omit the console log the next times you type it.)
+    // setInterval( function(){ console.log('hi'); }, 2000);
+    // Once you’re ready, type it 5 more times without looking at an example.
+
+
+
+
+    // 3.  Create an invisible div (CSS display:none).
+    // After 5 seconds, show the div (CSS display:block).
+
+
+
+    // 4.  Create an array of valid HTML colors (for example: ['red', 'orange', '#ff0']).
+    // Using setInterval, make a div’s background cycle through the colors listed in the array.
+    // The background color should change every 2 seconds.
+
+
+
+
+    // 5.  Create a countdown that goes from 10 to 0 with one second in between.
+    // Show the current number in a div.
+    // You’ll need to use setInterval and clearInterval to make this countdown work.
+
+
+
+
+
+
+
+
+
+
+
+
+    ////////////////////////////////////////
+    // 6.3 Date Times
+    
+    // var d = new Date();
+    // console.log(d);
+    // In this example, you’ll notice that new Date() is used to construct a new Date object.
+
+    // In JavaScript, a Date object contains a year, a month, a date, a day of the week, an hour, a minute,    a second, and a millisecond.
+
+    // By default new Date() gives you the current date, but you can change it if you want. Here’s one way     to do that (type this example):
+
+    // var d = new Date('march 15 2015');
+
+
+    // var d = new Date();
+    // console.log( d.getDate() ); // 1 to 31
+    // console.log( d.getMonth() ); // 0 to 11 (0 is January)
+    // console.log( d.getFullYear() );
+    // console.log( d.getDay() ); // 0 to 6 (0 is Sunday)
+    // Warning: getDate starts at 1 but other values start at 0
+
+    // Anyway, the important part is that getTime() turns a date from a weird object into a convenient number.
+    
+    // var d = new Date();
+    // console.log( d.getTime() );
+    // Type the following to see how it works:
+
+
+    // 1.  Show the current date in a div (no special formatting is required).
+    // 2.  Get the current year, month (from 0 to 11), and date (from 1 to 31), and show 
+    //     them in a div. 
+
+    // 3.  Days of the week:
+    //     Create an array containing the names of the days of the week.
+    //     Get the current day as a number from 0 to 6.
+    //     Based on that number, get the correct day name from the array.
+    //     Show the correct day name in a div.
+
+
+
+    //////////////////////////////////
+    // 7.6 Constructor Functions and Prototypes
+    
+    // In JavaScript, a constructor is a function that creates an object based on a sort of template.
+
+    // this constructor function creates a car object
+
+// function Car(color, speed){
+// 	this.color = color;
+// 	this.topSpeed = speed;
+	
+// 	this.showCarInfo = function(){
+// 		console.log('Color: ' + this.color);
+// 		console.log('Top Speed: '+ this.topSpeed);
+// 	};
+// }
+
+// // now you can create as many cars as you want
+// var myCar = new Car('red', 180);
+// var yourCar = new Car('blue', 200);
+// var otherCar = new Car('green', 150);
+// var yetAnotherCar = new Car('gold', 240);
+
+// // feel free to test out your objects!
+// console.log("Your Car's Color: " + yourCar.color);
+// myCar.showCarInfo();
+// console.log("Other Car's Top Speed: " + otherCar.topSpeed);
+
+/*
+    In JavaScript, people will capitlize the first letter of a JavaScript constructor function. It’ll still work lowercase, but people use uppercase so that anyone reading it knows it’s a constructor.
+    The new keyword creates a new object based on your constructor function.
+    Each new car object has the properties you specified in the constructor.
+*/
+
+//////////////////////////////
+
+/*
+In JavaScript, objects can inherit properties from other objects.
+
+A prototype is a hidden object that sits in the background and allows other objects to inherit its properties.
+
+All JavaScript objects have a prototype.
+*/
+
+// Prototype
+
+// start
+// your basic car constructor function
+// function Car(color, speed){
+// 	this.color = color;
+// 	this.topSpeed = speed;
+// }
+
+// add the showCarInfo function to Car's prototype object
+// this means all the cars will get access to showCarInfo
+// Car.prototype.showCarInfo = function(){
+// 	console.log('Color: ' + this.color);
+// 	console.log('Top Speed: '+ this.topSpeed);
+// };
+
+// // create a bunch of cars
+// var myCar = new Car('red', 200);
+// var yourCar = new Car('blue', 150);
+// var otherCar = new Car('green', 180);
+// var yetAnotherCar = new Car('gold', 240);
+// end
+// // show your car (notice showCarInfo isn't there)
+// console.log('yourCar:');
+// console.log(yourCar);
+
+// // try using showCarInfo anyway
+// console.log('here is the car info:');
+// yourCar.showCarInfo();
+
+/*
+showCarInfo() wasn’t in the yourCar object, so how were we able to use it?
+
+ Here’s how:
+We changed the Car’s prototype object so that all the cars would automatically get access to showCarInfo.
+*/
+
+
+
+
+// 1. Social network profiles – Part 1
+
+// Create a constructor function called User.
+
+// Each new User object should have the following properties: name, city, and hobby.
+
+// Use your constructor function to create at least three new users.
+
+
+
+
+// 2.  Social network profiles – Part 2
+
+// Start with your code from the previous question.
+
+// Update User’s prototype so that all the user objects can access a method called showProfile. (Remember a method is just a function that belongs to an object.
+
+// The function should show a given user’s profile neatly in a div.
+
+
+/////////////////////////////////////
+// Event Object:
+// window.onclick = function(e){
+// 	console.log(e);
+// };
+
+// coordinates of a click:      
+// window.onclick = function(e){
+// 	console.log('x = ' + e.pageX);
+// 	console.log('y = ' + e.pageY);
+// };
+
+// which key was pressed:
+// window.onkeydown = function(e){
+// 	console.log(e);
+// 	console.log(e.keyCode);
+// };
+
+
+
+    // 1.  When the user clicks anywhere on the page, show the event object in the console.
+
+    // Once you get that to work, try other events and see what happens. Maybe onmousemove or onkeydown or something else.
+
+    // Experiment with some of the properties to see what’s available.
+
+
+
+
+
+    // 2.  When the user clicks anywhere on the page, display the coordinates of that click in a div.
+
+
+
+
+
+    // 3.  Practical mini-project: Place a marker on a map
+
+    // Create a page with a map and a destination marker.
+
+    // On that page, you should be able to change the position of the destination marker by clicking anywhere on the map.
+
+    // Hint:
+    // You already know how to get the coordinates of a click. The rest of this question is just CSS positioning.
+ 
+
+
+
+    // 4. Practical mini-project: Make a basic moving game character token
+
+    // Create a div that’s a small orange square.
+
+    // When the user pushes a key anywhere on the page, check the keyCode.
+
+    // If the keyCode corresponds to the up arrow, the square should move up 20 pixels. If right arrow, right 20 pixels. Etc.
+
+    // If done correctly, you should be able to move this token around the screen.
+
+    // For fun, you can replace it with an image of a game character.
+
+    // Bonus: What if you want it to move more smoothly?
+
+
+
+    ////////////////////////////////////////
+    // 8.2 add more than one event listener
+
+/* <button id="btn">Button</button>
+
+<script>
+var btn = document.getElementById('btn');
+
+function doThing(){
+	console.log('thing');
+}
+
+btn.addEventListener('click', doThing);
+</script> */
+
+/* Then add:*/
+
+// function doOtherThing(){
+// 	console.log('other thing');
+// }
+
+// btn.addEventListener('click', doOtherThing);
+
+// how to listen for other events:
+// ex: onclick or onmouseover *** you have to remove the "on"
+// use: click, mouseover, etc
+// btn.addEventListener('mouseover', doThing);
+
+// The event object
+// function doThing(e){
+// 	console.log(e);
+// }
+
+// btn.addEventListener('click', doThing);
+
+// Listen for events on the whole window
+// function showMouseLocation(e){
+// 	console.log('x=' + e.clientX + ', y=' + e.clientY);
+// }
+// window.addEventListener('mousemove', showMouseLocation);
+
+// you can use a anonymous function 
+// btn.addEventListener('click', function(){
+// 	console.log('here\'s an anonymous function');
+// })
+
+// Remove Evenet Listeners
+//*******removeEventListener doesn’t work with anonymous functions because it needs to know which function you’re removing. */
+/* <button id="btn">Button</button>
+
+<script>
+var btn = document.getElementById('btn');
+
+function respondOnlyOnce(){
+	console.log('You should see this only once.');
+
+	btn.removeEventListener('click', respondOnlyOnce);
+}
+
+btn.addEventListener('click', respondOnlyOnce);
+</script> */
+
+
+
+
+//    1. Type the following and make sure it works:
+
+//     <button id="btn">Button</button>
+
+//     <script>
+//     var btn = document.getElementById('btn');
+
+//     function doThing(){
+//     	console.log('thing');
+//     }
+
+//     btn.addEventListener('click', doThing);
+//     </script>
+
+//     Once it works, retype the following line 20 times:
+
+//     btn.addEventListener('click', doThing);
+
+//     Even if you feel like you get it, I don’t recommend skipping this because you’ll use this a lot.
+
+//    2.  Let’s say you’re working on a codebase and you see this code (you can copy and paste it):
+
+//     <button id="btn">Button</button>
+//     <div id="output">Not clicked yet.</div>
+
+//     <script>
+//     var btn = document.getElementById('btn');
+//     var outputDiv = document.getElementById('output');
+
+//     function showSuccessMessage(){
+//     	outputDiv.innerHTML = 'Success!';
+//     }
+
+//     btn.addEventListener('click', showSuccessMessage);
+//     </script>
+//     When a user clicks the button, you want to turn the output div’s text green without touching any of the existing functions.
+//     What would you do?
+
+
+
+//    3.  When the user clicks anywhere on the page, display the coordinates of that click in a div.
+//     Use an event listener and the event object to make this happen.
+//     If you’re not sure how to do this, you can refer back to the lesson, but once you’ve got it, redo it without help.
+
+
+
+
+
+//     4.  Create a div that only shows up after someone clicks on a button.
+//     Use an event listener to handle the click.
+
+
+
+
+
+
+//     5.  Practical mini-project: Make Your Own Analytics
+//     Pretend you’re building some analytics software to tell a company which of three important buttons their users clicked on the most.
+//     Start with an object that looks like this:
+
+//     var buttons = {
+//     	top: 0,
+//     	middle: 0,
+//     	bottom: 0
+//     };
+
+//     Each time the user clicks on one of the buttons, add 1 to the corresponding number in the buttons object.
+//     If you’ve done it correctly, then clicking on the buttons a bunch of times should change the numbers in your object.
+// Are you starting to feel comfortable with event listeners?
+// If not, play around with them until you do.
+// The reason I didn’t introduce them earlier is that I remember how confusing it was to learn onclick, addEventListener, and various fallbacks at the same time.
+// Now it’s my hope that you’ll have clarity on how event listeners work.
+// ← Previous Unit
+// Next Unit →
+// Course Map
+// Help and Hints
+
+
+
+////////////////////////////////////////////////
+// 8.3 IIFEs (iffy)  Immediately-Invoked-Function-Expression
+
+/*
+You can use an IIFE to keep your code out of global scope, which is awesome because:
+
+    You won’t overwrite someone else’s variables
+    Your variables won’t get overwritten
+
+    () = invocation operator
+*/
+/*
+(function(){
+	var message = 'Secret message';
+	console.log(message);
+})();
+
+What happens when you try to access the message variable outside your function?
+*/
+/*
+(See this thing?)(Run it immediately.);
+Step 1: Create an anonymous function.
+
+function(){}
+
+Step 2: Put your function in parentheses (spaces don’t matter here).
+
+( function(){} )
+
+Step 3: Run your function.
+
+( function(){} )();
+
+Step 4: Put whatever you want in your function.
+
+(function(){
+	console.log('stuff');
+})();
+*/
+/* Parameters in IIFEs
+
+(function(a,b){
+	console.log(a+b);
+})(1,2);
+*/
+
+/*
+One common use for parameters in IIFEs is to store frequently used globals like window or document. This can help for brevity (long names can be shortened) and performance (so the browser doesn’t have to look far to find the variables).
+
+(function(d){
+	d.getElementById('whatever').innerHTML = 'something';
+})(document);
+*/
+
+
+
+    // 1. Type the following and make sure it works:
+
+    // (function(){
+    // 	console.log('It worked');
+    // })();
+
+    // Once it works, retype the following 10 times:
+
+    // (function(){})();
+
+    // If it helps, remember it like this:
+
+    // ( your function goes here )();
+
+    // When you’re done, see if you can write an IIFE without looking at an example.
+
+
+
+
+
+
+    // 2. Store a message inside a variable in an IIFE.
+    // Still inside the IIFE, log that message to the console.
